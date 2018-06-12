@@ -2,10 +2,12 @@
 1、假设nodejs根目录为“D:\nodejs” 如下所示，新建“node_cache”文件夹用来存放全局缓存 该路径下已经存在node_modules目录可用来存放全局模块，无需创建新的
 文件夹，默认已经内置了npm,
 >npm config set cache "D:\nodejs\node_cache"
->npm config set prefix "D:\nodejs"  --nodejs会自动寻找该路径下的node_modules文件夹为实际存放全局模块的路径，这也是为啥叫prefix不叫global的原因；以后
-2、安装的全局模块都会被放到D:\Program Files\nodejs\node_modules下，跟npm模块在一个文件夹中
-3、查看配置结果
+>npm config set prefix "D:\nodejs"  --nodejs会自动寻找该路径下的node_modules文件夹为实际存放全局模块的路径，这也是为啥叫prefix不叫global的原因；以后安装的全局模块都会被放到D:\Program Files\nodejs\node_modules下，跟npm模块在一个文件夹中
+
+2、查看配置结果
 >npm config ls
+
 此时，npm模块安装的默认全局路径已经改到了相应的文件夹中，但是 这时候用户还是无法require这些模块，因为电脑系统现在还不知道你把默认路径给改了
 需要在环境变量中设置NODE_PATH路径（模块执行路径）
-![](){ImgCap}{/ImgCap}
+
+![系统变量](image/nodepath.png)
