@@ -1,0 +1,14 @@
+修改模块默认保存路径
+1、假设nodejs根目录为“D:\nodejs” 如下所示，新建“node_cache”文件夹用来存放全局缓存 该路径下已经存在node_modules目录可用来存放全局模块，无需创建新的
+文件夹，默认已经内置了npm,
+```
+  npm config set cache "D:\nodejs\node_cache"  
+  npm config set prefix "D:\nodejs"  --nodejs会自动寻找该路径下的node_modules文件夹为实际存放全局模块的路径，这也是为啥叫prefix不叫global的原因；以后
+ 安装的全局模块都会被放到D:\Program Files\nodejs\node_modules下，跟npm模块在一个文件夹中
+```
+
+``` c++
+int a = 1;
+int b = 2;
+int c = a+b;
+```
